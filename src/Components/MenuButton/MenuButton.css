@@ -1,0 +1,23 @@
+button.menu-button{
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    background-color: transparent;
+    padding: .5rem 1.5rem;
+    font-size: 1rem;
+    margin: .5rem;
+}
+
+button.menu-button:hover{
+    cursor: pointer;
+    background-color: #8b8b7d;
+}
+
+button.active{
+    border: 2px solid black;
+    color: black;
+}
+
+button.active:hover{
+    background-color: rgb(236, 236, 236);
+}

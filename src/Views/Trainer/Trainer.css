@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+main.trainer-container{
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center children horizontally */
+    justify-content: space-around; /* Distribute the space */
+}
+
+h1.logo{
+    font-size: 3rem;
+    margin: 2rem 5rem;
+}
+
+h1.logo:hover{
+    cursor: pointer;
+}
+
+.trainer-header-buttons{
+    margin: 0 4.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.problem-field {
+    display: flex; /* Use flexbox to lay out the text and input field */
+    align-items: center; /* Align vertically */
+    justify-content: center; /* Align horizontally */
+    font-family: 'Poppins', sans-serif; /* Set the font family */
+    font-weight: 500; /* Font weight as requested */
+    font-size: 5rem; /* Significantly increased font-size */
+    color: white; /* Default text color */
+    position: relative; /* Positioning context for the underline */
+    flex-grow: 1;
+}
+
+/* .problem-field::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 1500%);
+    width: 100%;
+    height: 3px;
+    background-color: white;
+} */
+
+.problem-field span, .problem-field input {
+    margin: 0 0.2rem;
+}
+
+.problem-field input {
+    background: none; /* Remove default background */
+    border: none; /* Remove default border */
+    min-width: 2rem; /* Minimum width, but it will expand as content increases */
+    max-width: 20rem;
+    font-family: 'Poppins', sans-serif; /* Ensure input text matches other text */
+    font-weight: 500; /* Font weight for input */
+    font-size: 5rem; /* Keep font size consistent */
+    text-align: left; /* Ensure text starts from left */
+}
+
+.problem-field input:focus {
+    outline: none; /* Remove focus highlight for cleaner design */
+}
+
+/* Chrome, Safari, Edge, Opera */
+.problem-field input::-webkit-outer-spin-button,
+.problem-field input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.problem-field input[type=number] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+
+
+.timer-field{
+    flex-grow: 1;
+}
+
+h1.timer{
+    color: white;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+span.seconds{
+    color: #8E3B46;
+}
+
+button.finish{
+    margin-bottom: 10rem;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: white;
+}
+
+button.finish:hover{
+    cursor: pointer;
+    background-color: #8b8b7d;
+}
+
+.progress-bar-container {
+    width: 100vw;
+    height: 20px;
+    background-color: transparent;
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+@keyframes levelUp {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.level-up-animation {
+    animation: levelUp 3s ease-in-out forwards;
+    position: fixed;
+    top: 60%;
+    left: 20%;
+    transform: scale(0.8);  /* adjusted scale value to make popup smaller */
+    font-size: 1.5rem;  /* adjusted font size to make popup smaller */
+    color: white;
+    background-color: #4B3B40;
+    padding: 10px 15px;  /* adjusted padding to make popup smaller */
+    border-radius: 0;  /* removed border-radius */
+    text-align: center;
+}
+
+.level-down-animation {
+    animation: levelUp 3s ease-in-out forwards;
+    position: fixed;
+    top: 60%;
+    left: 20%;
+    transform: scale(0.8);  /* adjusted scale value to make popup smaller */
+    font-size: 1.5rem;  /* adjusted font size to make popup smaller */
+    color: white;
+    background-color: #982929;
+    padding: 10px;  /* adjusted padding to make popup smaller */
+    border-radius: 0;  /* removed border-radius */
+    text-align: center;
+}
