@@ -21,7 +21,7 @@ export default function Summary(){
             <div className="summary-field">
                 <h1 className="summary-title">Summary</h1>
                 <div className="stats-field">
-                    <h2>Average Answer Time: {averageTime.toFixed(2)} seconds</h2>
+                    <h2>Average Answer Time: {averageTime == "N/A" ? "N/A" : averageTime.toFixed(2)} seconds</h2>
                     <h2>Highest Level Reached: {highestLevel + 1}</h2>
                     <h2>Total Correct: {totalRight}</h2>
                     <h2>Total Timed Out: {totalTimedOut}</h2>
