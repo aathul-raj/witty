@@ -69,12 +69,39 @@ h1.logo{
     cursor: default; /* This will prevent the text cursor and show the default cursor instead */
 }
 
+/* Mobile and Tablet Responsive Adjustments */
 @media (max-width:900px) {
+    .home-container{
+        justify-content: space-around;
+        align-items: center;
+    }
+
     nav.header{
-        margin: 0 1rem;
+        margin: 1rem 1rem;
+    }
+
+    h1.logo, button.start-btn, h2.landing-sub {
+        font-size: 1.5rem; /* Smaller text for smaller screens */
+    }
+
+    h1.landing-text {
+        font-size: 3rem; /* Reduce the size of the main title */
     }
 
     img.waves{
         display: none;
+    }
+}
+
+/* Further adjustments for smaller mobile screens */
+@media (max-width:600px) {
+    nav.header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button.start-btn {
+        padding: .4rem 1rem; /* Reduce padding on smaller screens */
+        font-size: .9rem; /* Smaller button font size */
     }
 }

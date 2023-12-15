@@ -8,3 +8,9 @@ footer.simple{
     margin-bottom: 0;
     cursor: default;
 }
+
+@media (max-width:900px){
+    footer.simple{
+        margin-top: 0;
+    }
+}
